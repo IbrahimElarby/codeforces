@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cin>>n;
+    vector<vector<int>> team ;
+
+    int sum = 0;
+    int f =0;
+    for(int i = 0 ; i < n ; i++)
+    {
+        team.push_back(vector<int>());
+        for(int j = 0 ;  j < 3 ; j++)
+        {
+            team[i].push_back(0);
+
+            cin>>team[i][j];
+        }
+    }
+     for(int i = 0 ; i < n ; i++)
+    {
+        for(int j = 0 ;  j < 3 ; j++)
+        {
+            sum+= team[i][j];
+        }
+        if(sum>=2)
+        {
+            f++;
+        }
+        sum=0;
+    }
+cout<<f;
+    return 0;
+}
