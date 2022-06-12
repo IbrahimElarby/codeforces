@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  int n ;
+  int l;
+  cin >> n ;
+  vector <string> inputs ;
+  for(int i = 0; i < n ;i++)
+  {
+      inputs.push_back("0");
+      cin >> inputs[i];
+      
+  }
+  for(int i = 0 ; i < n; i++)
+  {l= inputs[i].length();
+      if(l <= 10)
+      {
+          cout<<inputs[i]<<endl;
+      }
+      else 
+      {
+          
+          cout<<inputs[i][0]<<l-2<<inputs[i][l-1]<<endl;
+      }
+      
+  }
+  
+    
+}
