@@ -1,11 +1,26 @@
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 int main()
 {
-int l ,w ;
-cin>> l >> w;
+   int n , k, c;
+   cin >> n ;
+   cin >> k ;
+   c=0;
+   vector <int> inputs ;
+   for(int i =0 ; i < n ; i++)
+   {
+       inputs.push_back(0);
+       cin>> inputs[i];
+   }
+   for(int i =0 ; i < n ; i++)
+   {
+       if (inputs[i] >= inputs[k-1] && inputs[i]>0)
+       {
+           c++;
+       }
+   }
  
-cout << (l*w)/2 ;
+   cout<<c;
 }
