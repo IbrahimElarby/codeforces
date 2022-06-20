@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string addition;
+    cin >> addition;
+    int n = addition.size();
+    vector <char> orderd;
+    for(int i = 0 ; i < n ; i++)
+    {
+        if (addition[i]!='+')
+        {
+            orderd.push_back(addition[i]);
+        }
+    }
+    sort(orderd.begin(),orderd.end());
+    n = orderd.size();
+     int j = 0;
+    for(int i = 0 ; i < (2*n)-1;i++)
+    {
+        if(i%2 != 0 )
+            {
+            cout<<"+";
+            }
+        else
+        {
+            cout<<orderd[j];
+            j++;
+        }
+
+    }
+    return 0;
+}
