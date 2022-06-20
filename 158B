@@ -1,0 +1,76 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n ;
+    cin>>n;
+    vector<int> sizes;
+    int temp;
+    for(int i = 0; i < n ;i++)
+    {
+        cin>>temp;
+        sizes.push_back(temp);
+    }
+    sort(sizes.begin(),sizes.end());
+    vector<int>countt;
+    for(int i=0;i < 4 ;i++)
+    {
+        if( count(sizes.begin(),sizes.end(),i+1) != 0  )
+        {
+          countt.push_back(count(sizes.begin(),sizes.end(),i+1));
+        }
+        else
+        {
+          countt.push_back(0);
+        }
+
+
+    }
+    int c=0;
+    c += countt[3];
+    if(countt[2]>=countt[0])
+    {
+        c+=countt[2];
+        countt[0]= 0;
+    }
+    else
+    {
+
+        c+=countt[2];
+        countt[0]= countt[0]-countt[2];
+
+    }
+     if(countt[1]%2 ==0)
+     {
+         c+= countt[1]/2;
+     }
+     else
+     {
+         c+=countt[1]/2;
+          c+=1;
+
+       if(countt[0]>=2)
+       {
+         countt[0]= countt[0]-2;
+       }
+       else
+       {
+           countt[0]=0;
+       }
+
+     }
+    if(countt[0]%4 != 0)
+    {
+        c+=1;
+        c+=countt[0]/4;
+    }
+    else
+    {
+          c+=countt[0]/4;
+    }
+
+ cout<<c;
+         return 0;
+}
