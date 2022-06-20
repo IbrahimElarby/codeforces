@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+   int n ;
+   cin>> n ;
+   vector<int> num;
+   int temp;
+   for(int i = 0 ; i < n ;i++ )
+   {
+       cin>>temp;
+       num.push_back(temp);
+   }
+   sort(num.begin(),num.end());
+   int avg = (accumulate(num.begin(), num.end(), 0))/2;
+  int countt = 1;
+  int sum = 0;
+  for(int i = num.size()-1; i >= 0 ;i--)
+  {
+     sum+=num[i];
+     
+     if(sum > avg)
+     {
+         break;
+     }
+
+     countt++;
+  }
+
+  cout<<countt;
+
+    return 0;
+}
