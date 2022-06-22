@@ -4,26 +4,24 @@ using namespace std;
  
 int main()
 {
-int l ;
-cin>>l;
-string t;
-vector <string> n ;
-for(int i = 0 ; i < l ; i++)
+ 
+int k,n,w;
+cin>>k;
+cin>>n;
+cin>>w;
+int sum =0;
+for(int i=1; i<=w ; i++)
 {
-    cin>>t;
-    n.push_back(t);
+    sum+=i*k;
 }
-for(int i = 0 ; i < l ; i++)
+if (sum <= n)
 {
- if(count(n[i].begin(),n[i].end(),'B') == (count(n[i].begin(),n[i].end(),'A') + count(n[i].begin(),n[i].end(),'C')))
-{
-    cout<<"YES\n";
+    sum=0;
+    cout<<sum;
 }
 else
 {
-    cout<<"NO\n";
+    cout<<sum-n;
 }
-}
- 
          return 0;
 }
