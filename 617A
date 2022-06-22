@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main()
+{
+ 
+int n;
+cin>>n;
+int countt=0;
+countt = n/5;
+if(n%5 != 0)
+{
+    countt++;
+}
+cout<<countt;
+ 
+         return 0;
+}
