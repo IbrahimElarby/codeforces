@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main()
+{
+int l ;
+cin>>l;
+string t;
+vector <string> n ;
+for(int i = 0 ; i < l ; i++)
+{
+    cin>>t;
+    n.push_back(t);
+}
+for(int i = 0 ; i < l ; i++)
+{
+ if(count(n[i].begin(),n[i].end(),'B') == (count(n[i].begin(),n[i].end(),'A') + count(n[i].begin(),n[i].end(),'C')))
+{
+    cout<<"YES\n";
+}
+else
+{
+    cout<<"NO\n";
+}
+}
+ 
+         return 0;
+}
