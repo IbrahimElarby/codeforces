@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+int n , nx,ny,t;
+cin>> n ;
+unordered_set<int> nums;
+cin >> nx ;
+for(int i = 0;  i< nx ;i++)
+{
+    cin>>t;
+    nums.insert(t);
+}
+cin >> ny ;
+for(int i = 0;  i< ny ;i++)
+{
+    cin>>t;
+    nums.insert(t);
+}
+if(nums.size()==n)
+{
+    cout<<"I become the guy.";
+}
+else
+{
+    cout<<"Oh, my keyboard!";
+}
+         return 0;
+}
