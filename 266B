@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+string que ;
+char temp ;
+int n ,t;
+cin >> n ;
+cin >> t ;
+cin>>que;
+int s = que.size();
+for(int i = 0 ; i < t ; i++)
+{
+    for(int j = 0 ; j < s - 1; j++)
+    {
+        if(que[j] == 'B' && que[j+1] == 'G')
+        {
+            temp = que[j] ;
+            que[j] = que[j+1];
+            que[j+1] = temp ;
+            j++;
+        }
+    }
+}
+cout<<que;
+         return 0;
+}
