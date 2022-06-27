@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+   long long n ;
+   cin >> n;
+   long long k;
+   cin >> k ;
+   vector<long long>ks;
+   vector<pair<long long,long long>> rm;
+   long long temp;
+   for(long long i = 0 ; i < k ; i++)
+   {
+       cin>> temp;
+       ks.push_back(temp);
+   }
+   for(long long i = 1 ; i <= k ; i++)
+   {
+       if(n / ks[i-1] >= 1 )
+       {
+           rm.push_back(make_pair(n % ks[i-1],i ));
+       }
+       else
+        {
+            rm.push_back(make_pair(ks[i-1],i));
+        }
+   }
+   sort(rm.begin(),rm.end());
+   cout<<rm[0].second<<" "<<n / ks[rm[0].second - 1]<<endl;
+         return 0;
+}
