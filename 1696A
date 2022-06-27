@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+int N;
+cin>> N;
+vector<int> n ;
+vector <int> z ;
+vector <int> sett;
+vector<int>maxx;
+int tempn;
+int tempz;
+for(int i =0 ; i < N ; i++)
+{
+    cin>>tempn;
+    cin>>tempz;
+    n.push_back(tempn);
+    z.push_back(tempz);
+    for(int j = 0 ; j < n[i] ;j++ )
+    {
+        cin>>tempn;
+        sett.push_back(tempn);
+        sett[j] = sett[j] | z[i] ;
+
+    }
+    maxx.push_back(*max_element(sett.begin(),sett.end()));
+    sett.clear();
+
+}
+for(int i = 0 ; i < maxx.size() ; i++)
+{
+    cout<<maxx[i]<<endl;
+}
+
+         return 0;
+}
