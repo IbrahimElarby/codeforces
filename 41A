@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+string forr ;
+string backk ;
+cin>>forr;
+cin>>backk;
+int n = forr.size();
+string con ;
+for(int i = 0 ; i < n ; i++ )
+{
+    if(forr[i] == backk[n-1-i])
+    {
+        con = "YES";
+    }
+    else
+    {
+        con = "NO";
+        break;
+    }
+}
+cout<<con;
+         return 0;
+}
