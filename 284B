@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+     int n;
+     cin>>n;
+     string po;
+     cin>>po;
+     int as = 0 , is = 0,fs = 0;
+     as= count(po.begin(),po.end(),'A');
+     is= count(po.begin(),po.end(),'I');
+     fs= count(po.begin(),po.end(),'F');
+     if(is == 0)
+     {
+         cout<<as;
+     }
+     else if(is == 1)
+     {
+         cout<<is;
+     }
+     else
+    {
+            cout<<"0";
+    }
+
+
+         return 0;
+}
