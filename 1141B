@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+int n;
+cin>>n;
+vector<int>hours;
+int temp;
+for(int i = 0 ; i < n ; i++)
+{
+    cin>> temp;
+
+
+        hours.push_back((temp));
+
+}
+
+vector<int> countt;
+for(int h = 0 ; h < n ; h++)
+{
+    countt.push_back(0);
+}
+int k=1;
+int i =0;
+int j = n-1;
+for(; i < n ; i++)
+{
+    if (hours[i] == 1 )
+    {
+        countt[0]++;
+    }
+    else
+        {
+            break;
+        }
+}
+for(; j > 0 ; j--)
+{
+    if (hours[j] == 1 )
+    {
+        countt[0]++;
+    }
+    else
+        {
+            break;
+        }
+}
+for(int l = i ; l < j ; l++)
+{
+    if(hours[l] == 1)
+    {
+        countt[k]++;
+       
+    }
+    else
+    {
+        k++;
+    }
+}
+cout<<*max_element(countt.begin(),countt.end());
+
+        return 0;
+}
