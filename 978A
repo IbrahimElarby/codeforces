@@ -1,0 +1,43 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+vector<int> scan_input ()
+{
+    vector<int>vec;
+    int size ;
+    int temp;
+    cin>> size;
+    for(int i = 0 ; i < size ; i++)
+    {
+        cin>>temp;
+        vec.push_back(temp);
+    }
+    return vec;
+}
+
+
+
+int main()
+{
+    vector <int> arr = scan_input();
+    int size = arr.size();
+    reverse(arr.begin(),arr.end());
+    vector <int> finall ;
+    for(int i = 0 ; i < size ; i++)
+    {
+        if(count(finall.begin(),finall.end(),arr[i]) == 0)
+        {
+            finall.push_back(arr[i]);
+        }
+    }
+     cout<<finall.size()<<endl;
+     for(int i = finall.size()-1 ; i >= 0 ; i--)
+     {
+         cout<<finall[i]<<" ";
+     }
+
+
+    return 0;
+}
