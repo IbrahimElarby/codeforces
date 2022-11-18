@@ -1,0 +1,61 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<long long> scan_vec (int s)
+{
+    long long temp;
+    vector<long long> x;
+    for(int i = 0 ; i < s ;i++)
+    {
+        cin>>temp;
+        assert(temp <= (int)1e9);
+        x.push_back(temp);
+
+    }
+    return x;
+}
+
+
+int main()
+{
+    long long n ;
+    cin>>n;
+    while(n--)
+    {
+
+          vector <long long> a ;
+          int s;
+          cin>>s;
+          a = scan_vec(s);
+          int k;
+          long long  ones = count(a.begin(),a.end(),1) ;
+          bool ok = true;
+          int ans;
+          sort(a.begin(),a.end());
+          for(k = ones ; k >= 0 ;k--)
+          {
+              int j = k;
+              ok = true;
+              for(int i = 2 ; i <= k ; i++)
+              {
+                  if(j < s && a[j] <= i) j++;
+                  else ok = false;
+              }
+              if(ok)
+              {ans = k;
+              break;}
+          }
+          cout<<ans<<"\n";
+
+
+
+
+
+
+
+
+
+    }
+    return 0;
+}
