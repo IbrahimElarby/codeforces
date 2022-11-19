@@ -1,0 +1,30 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+typedef signed long long ll;
+int main()
+{
+    int n ;
+    cin>>n;
+    while(n--)
+
+    {
+
+        ll temp;
+        int s;
+        cin>>s;
+        ll ans = 0;
+        while(s--)
+        {
+          cin>>temp;
+          ans+=temp;
+        }
+        cout<<abs(ans)<<"\n";
+
+
+
+
+
+    }
+    return 0;
+}
